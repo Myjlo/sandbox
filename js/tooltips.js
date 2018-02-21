@@ -56,6 +56,10 @@
     effectTooltips(Stealth, 'Stealth');
     var Revealed = document.getElementsByClassName("tooltip-Revealed");
     effectTooltips(Revealed, 'Revealed');
+    var Nourishment = document.getElementsByClassName("tooltip-Nourishment");
+    effectTooltips(Nourishment, 'Nourishment');
+    var Enhancement = document.getElementsByClassName("tooltip-Enhancement");
+    effectTooltips(Enhancement, 'Enhancement');
     //Conditions
     var Bleeding = document.getElementsByClassName("tooltip-Bleeding");
     effectTooltips(Bleeding, 'Bleeding');
@@ -115,25 +119,54 @@
 //Role Tooltips
     //Utility
     var ChronoTank = document.getElementsByClassName("tooltip-role-ChronoTank");
-    professionTooltips(ChronoTank, 'Chronomancer', 'Tank', 'Tank');
-    var ChronoDPS = document.getElementsByClassName("tooltip-role-ChronoDPS");
-    professionTooltips(ChronoDPS, 'Chronomancer', 'Power', 'Utility');
+    professionTooltips(ChronoTank, 'Chronomancer', 'Tank');
+    var ChronoUtility = document.getElementsByClassName("tooltip-role-ChronoUtility");
+    professionTooltips(ChronoUtility, 'Chronomancer', 'Utility');
+    var RenegadeSupport = document.getElementsByClassName("tooltip-role-RenegadeSupport");
+    professionTooltips(RenegadeSupport, 'Renegade', 'Utility', 'Support');
     var HeraldKiter = document.getElementsByClassName("tooltip-role-HeraldKiter");
-    professionTooltips(HeraldKiter, 'Herald', 'Healer', 'Handkiter');
+    professionTooltips(HeraldKiter, 'Herald', 'Utility', 'Handkiter');
     var Bannerslave = document.getElementsByClassName("tooltip-role-Bannerslave");
     professionTooltips(Bannerslave, 'Berserker', 'Condi', 'Banners');
     //Healer
     var DruidHealer = document.getElementsByClassName("tooltip-role-DruidHealer");
     professionTooltips(DruidHealer, 'Druid', 'Healer');
     var DruidCondi = document.getElementsByClassName("tooltip-role-DruidCondi");
-    professionTooltips(DruidCondi, 'Druid', 'Condi');
+    professionTooltips(DruidCondi, 'Druid', 'Condi', 'Healer');
     var DruidPower = document.getElementsByClassName("tooltip-role-DruidPower");
-    professionTooltips(DruidPower, 'Druid', 'Power');
+    professionTooltips(DruidPower, 'Druid', 'Power', 'Healer');
+    var TempestHealer = document.getElementsByClassName("tooltip-role-TempestHealer");
+    professionTooltips(TempestHealer, 'Tempest', 'Healer');
     //Condi
-
-
-
-
+    var BerserkerCondi = document.getElementsByClassName("tooltip-role-BerserkerCondi");
+    professionTooltips(BerserkerCondi, 'Berserker', 'Condi');
+    var FirebrandCondi = document.getElementsByClassName("tooltip-role-FirebrandCondi");
+    professionTooltips(FirebrandCondi, 'Firebrand', 'Condi');
+    var EngineerCondi = document.getElementsByClassName("tooltip-role-EngineerCondi");
+    professionTooltips(EngineerCondi, 'Engineer', 'Condi');
+    var DaredevilCondi = document.getElementsByClassName("tooltip-role-DaredevilCondi");
+    professionTooltips(DaredevilCondi, 'Daredevil', 'Condi');
+    var MirageCondi = document.getElementsByClassName("tooltip-role-MirageCondi");
+    professionTooltips(MirageCondi, 'Mirage', 'Condi');
+    var RenegadeCondi = document.getElementsByClassName("tooltip-role-RenegadeCondi");
+    professionTooltips(RenegadeCondi, 'Renegade', 'Condi');
+    var ScourgeCondi = document.getElementsByClassName("tooltip-role-ScourgeCondi");
+    professionTooltips(ScourgeCondi, 'Scourge', 'Condi');
+    var SoulbeastCondi = document.getElementsByClassName("tooltip-role-SoulbeastCondi");
+    professionTooltips(SoulbeastCondi, 'Soulbeast', 'Condi');
+    //Power
+    var SpellbreakerPower = document.getElementsByClassName("tooltip-role-SpellbreakerPower");
+    professionTooltips(SpellbreakerPower, 'Spellbreaker', 'Power');
+    var WeaverPower = document.getElementsByClassName("tooltip-role-WeaverPower");
+    professionTooltips(WeaverPower, 'Weaver', 'Power');
+    var DragonhunterPower = document.getElementsByClassName("tooltip-role-DragonhunterPower");
+    professionTooltips(DragonhunterPower, 'Dragonhunter', 'Power');
+    var HolosmithPower = document.getElementsByClassName("tooltip-role-HolosmithPower");
+    professionTooltips(HolosmithPower, 'Holosmith', 'Power');
+    var DaredevilPower = document.getElementsByClassName("tooltip-role-DaredevilPower");
+    professionTooltips(DaredevilPower, 'Daredevil', 'Power');
+    var ChronomancerPower = document.getElementsByClassName("tooltip-role-ChronomancerPower");
+    professionTooltips(ChronomancerPower, 'Spellbreaker', 'Power');
 
 
 
@@ -153,45 +186,5 @@
                 var roleName = roleIcon;
             }
             tooltip[i].innerHTML = '<span class="tooltipped" data-position="top" data-delay="50" data-tooltip=\'<img class="icon-class" src="assets/Icons/' + profession + '.png"><img class="icon-role" src="assets/Icons/' + roleIcon + '.png">' + profession + ' (' + roleName + ')' + '\'><img class="icon-class" src="assets/Icons/' + profession + '.png"><img class="icon-role" src="assets/Icons/' + roleIcon + '.png"></span>';
-
         };
     }
-
-
-
-
-
-/*	
-
-
-//Composition Tooltips
-    var ChronoTank = document.getElementsByClassName("role-Chrono-Tank");
-    for (i = 0; i < ChronoTank.length; i++) {
-        ChronoTank[i].innerHTML = '<span class="tooltipped" data-position="top" data-delay="50" data-tooltip=\'<img class="icon-class" src="assets/Icons/Chronomancer.png"><img class="icon-role" src="assets/Icons/Tank.png"> Chronomancer (Tank)\'><img class="icon-class" src="assets/Icons/Chronomancer.png"><img class="icon-role" src="assets/Icons/Tank.png"></span>';
-    };
-    var ChronoDPS = document.getElementsByClassName("role-Chrono-DPS");
-    for (i = 0; i < ChronoDPS.length; i++) {
-        ChronoDPS[i].innerHTML = '<span class="tooltipped" data-position="top" data-delay="50" data-tooltip=\'<img class="icon-class" src="assets/Icons/Chronomancer.png"><img class="icon-role" src="assets/Icons/Power.png"> Chronomancer\'><img class="icon-class" src="assets/Icons/Chronomancer.png"><img class="icon-role" src="assets/Icons/Power.png"></span>';
-    };
-    var DruidHealer = document.getElementsByClassName("role-Druid-Healer");
-    for (i = 0; i < DruidHealer.length; i++) {
-        DruidHealer[i].innerHTML = '<span class="tooltipped" data-position="top" data-delay="50" data-tooltip=\'<img class="icon-class" src="assets/Icons/Druid.png"><img class="icon-role" src="assets/Icons/Healer.png"> Druid (Healer)\'><img class="icon-class" src="assets/Icons/Druid.png"><img class="icon-role" src="assets/Icons/Healer.png"></span>';
-    };
-    var BerserkerBanners = document.getElementsByClassName("role-Berserker-Banners");
-    for (i = 0; i < BerserkerBanners.length; i++) {
-        BerserkerBanners[i].innerHTML = '<span class="tooltipped" data-position="top" data-delay="50" data-tooltip=\'<img class="icon-class" src="assets/Icons/Berserker.png"><img class="icon-role" src="assets/Icons/Condi.png"> Berserker (Banners)\'><img class="icon-class" src="assets/Icons/Berserker.png"><img class="icon-role" src="assets/Icons/Condi.png"></span>';
-    };
-    var HandKite = document.getElementsByClassName("role-Handkiter");
-    for (i = 0; i < HandKite.length; i++) {
-        HandKite[i].innerHTML = '<span class="tooltipped" data-position="top" data-delay="50" data-tooltip=\'<img class="icon-class" src="assets/Icons/Herald.png"><img class="icon-role" src="assets/Icons/Healer.png"> Handkiter\'><img class="icon-class" src="assets/Icons/Herald.png"><img class="icon-role" src="assets/Icons/Healer.png"></span>';
-    };
-    var DPSCondi = document.getElementsByClassName("role-DPS-Condi");
-    for (i = 0; i < DPSCondi.length; i++) {
-        DPSCondi[i].innerHTML = '<span class="tooltipped" data-position="top" data-delay="50" data-tooltip=\'<img class="icon-class" src="assets/Icons/Any.png"><img class="icon-role" src="assets/Icons/Condi.png"> Condition DPS\'><img class="icon-class" src="assets/Icons/Any.png"><img class="icon-role" src="assets/Icons/Condi.png"></span>';
-    };
-    var DPSPower = document.getElementsByClassName("role-DPS-Power");
-    for (i = 0; i < DPSPower.length; i++) {
-        DPSPower[i].innerHTML = '<span class="tooltipped" data-position="top" data-delay="50" data-tooltip=\'<img class="icon-class" src="assets/Icons/Any.png"><img class="icon-role" src="assets/Icons/Power.png"> Power DPS\'><img class="icon-class" src="assets/Icons/Any.png"><img class="icon-role" src="assets/Icons/Power.png"></span>';
-    };
-
-    */
