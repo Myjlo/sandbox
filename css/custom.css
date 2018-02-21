@@ -1,0 +1,82 @@
+/* Icon Styling */
+.icon-effect, .icon-class, .icon-role {
+	width: 20px;
+	height: 20px;
+	vertical-align: middle;
+}
+
+/* Text Styling */
+.text-item, .text-mechanic, .text-role {
+	font-weight: bold;
+
+}
+.text-timer {
+	color: #bbb;
+    font-weight: bold;
+}
+.text-info {
+	color: #F39C12;
+}
+.text-muted {
+	color: #999;
+}
+
+.elementalist {
+	color: #F68A87;
+}
+
+.mesmer {
+	color: #B679D5;
+}
+
+.necromancer {
+	color: #41a664;
+}
+
+.ranger {
+	color: #8bda5b;
+}
+
+.thief {
+	color: #C08F95;
+}
+
+.engineer {
+	color: #a86931;
+}
+
+.warrior {
+	color: #FFD166;
+}
+
+.guardian {
+	color: #58bddc;
+}
+
+.revenant {
+	color: #d8543a;
+}
+
+
+/* Elements */
+html, body {
+	background: url(../assets/background.png);
+	-webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: #fff;
+
+}
+.row dt, .row dd {
+	margin-top: 10px;
+}
+.btn-return-top {
+	position: fixed;
+	bottom: 2em;
+	right: 2em;
+	display: none;
+}
+
