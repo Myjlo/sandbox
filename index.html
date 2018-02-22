@@ -4,7 +4,8 @@
       <!--Import Google Icon Font-->
       <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
       <!--Import materialize.css-->
-      <link type="text/css" rel="stylesheet" href="css/materialize.css"  media="screen,projection"/>
+      <link type="text/css" rel="stylesheet" href="css/materialize.css"/>
+      <link type="text/css" rel="stylesheet" href="css/normalize.css">
       <link type="text/css" rel="stylesheet" href="css/custom.css">
 
       <!--Notify: optimized for mobile-->
@@ -13,104 +14,140 @@
 
     <body>
       <!--Header/Nav-->
+      <header class="navbar-fixed">
+        <ul id="RaidsDropdown" class="dropdown-content">
+          <li><a href="#!">one</a></li>
+          <li><a href="#!">two</a></li>
+          <li class="divider"></li>
+          <li><a href="#!">three</a></li>
+        </ul>
+        <nav class="nav">
+          <div class="nav-wrapper">
+            <a href="#" class="brand-logo"></a>
+            <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+            <ul class="right hide-on-med-and-down">
+              <li><a class="dropdown-trigger" href="#RaidsDropdown"></a></li>
+            </ul>
+          </div>
+        </nav>
+        <ul class="sidenav" id="mobile-demo">
+          
+        </ul>
+      </header>
 
       <!--Content-->
-      <main class="container">
-        <div class="row">
-          <div class="col 12">
-            <div class="card card-panel">
-              Utility
-              <br>
-              <a class="tooltip-role-ChronoTank"></a>
-              <a class="tooltip-role-ChronoUtility"></a>
-              <a class="tooltip-role-HeraldKiter"></a>
-              <a class="tooltip-role-RenegadeSupport"></a>
-              <a class="tooltip-role-Bannerslave"></a>
-              <br>
-              Healer
-              <br>
-              <a class="tooltip-role-DruidHealer"></a>
-              <a class="tooltip-role-DruidPower"></a>
-              <a class="tooltip-role-DruidCondi"></a>
-              <a class="tooltip-role-TempestHealer"></a>
-              <br>
-              Power DPS
-              <br>
-              <a class="tooltip-role-SpellbreakerPower"></a>
-              <a class="tooltip-role-WeaverPower"></a>
-              <a class="tooltip-role-DragonhunterPower"></a>
-              <a class="tooltip-role-HolosmithPower"></a>
-              <a class="tooltip-role-DaredevilPower"></a>
-              <a class="tooltip-role-ChronomancerPower"></a>
-              <br>
-              Condi DPS
-              <br>
-              <a class="tooltip-role-BerserkerCondi"></a>
-              <a class="tooltip-role-FirebrandCondi"></a>
-              <a class="tooltip-role-EngineerCondi"></a>
-              <a class="tooltip-role-DaredevilCondi"></a>
-              <a class="tooltip-role-MirageCondi"></a>
-              <a class="tooltip-role-RenegadeCondi"></a>
-              <a class="tooltip-role-SoulbeastCondi"></a>
-              <a class="tooltip-role-ScourgeCondi"></a>
-              <br>
-              <br>
-              Effects
-              <br>
-              <a class="tooltip-Aegis"></a>
-              <a class="tooltip-Alacrity"></a>
-              <a class="tooltip-Fury"></a>
-              <a class="tooltip-Might"></a>
-              <a class="tooltip-Protection"></a>
-              <a class="tooltip-Quickness"></a>
-              <a class="tooltip-Regeneration"></a>
-              <a class="tooltip-Resistance"></a>
-              <a class="tooltip-Retaliation"></a>
-              <a class="tooltip-Stability"></a>
-              <a class="tooltip-Swiftness"></a>
-              <a class="tooltip-Vigor"></a>
-              <br>
-              <a class="tooltip-Stun"></a>
-              <a class="tooltip-Daze"></a>
-              <a class="tooltip-Knockback"></a>
-              <a class="tooltip-Knockdown"></a>
-              <a class="tooltip-Launch"></a>
-              <a class="tooltip-Pull"></a>
-              <a class="tooltip-Float"></a>
-              <a class="tooltip-Sink"></a>
-              <a class="tooltip-Stealth"></a>
-              <a class="tooltip-Revealed"></a>
-              <a class="tooltip-Invulnerability"></a>
-              <a class="tooltip-Nourishment"></a>
-              <a class="tooltip-Enhancement"></a>
-              <br>
-              <a class="tooltip-Bleeding"></a>
-              <a class="tooltip-Burning"></a>
-              <a class="tooltip-Confusion"></a>
-              <a class="tooltip-Poison"></a>
-              <a class="tooltip-Torment"></a>
-              <a class="tooltip-Blind"></a>
-              <a class="tooltip-Chilled"></a>
-              <a class="tooltip-Crippled"></a>
-              <a class="tooltip-Fear"></a>
-              <a class="tooltip-Immobile"></a>
-              <a class="tooltip-Slow"></a>
-              <a class="tooltip-Taunt"></a>
-              <a class="tooltip-Vulnerability"></a>
-              <a class="tooltip-Weakness"></a>
-
-            </div>
-          </div>
-        </div>    
-      </main>
-
-      <!--Footer-->
-      <div class="footer">
-
+      <main class="container page-content">
+        <div class="pinned-fix">
+        <ul class="tabs tabs-fixed-width" id="encounters">
+          <li class="tab col s4"><a class="active" href="#ValeGuardian">Vale Guardian</a></li>
+          <li class="tab col s4"><a href="#Gorseval">Gorseval</a></li>
+          <li class="tab col s4"><a href="#Sabetha"> Sabetha</a></li>
+        </ul>
       </div>
+        <div class="row">
+          <div id="ValeGuardian" class="col s12 m12 l12">
+            <div class="col-content">
+              Utility
+<br>
+<a class="tooltip-role-ChronoTank"></a>
+<a class="tooltip-role-ChronoUtility"></a>
+<a class="tooltip-role-HeraldKiter"></a>
+<a class="tooltip-role-RenegadeSupport"></a>
+<a class="tooltip-role-Bannerslave"></a>
+<br>
+Healer
+<br>
+<a class="tooltip-role-DruidHealer"></a>
+<a class="tooltip-role-DruidPower"></a>
+<a class="tooltip-role-DruidCondi"></a>
+<a class="tooltip-role-TempestHealer"></a>
+<br>
+Power DPS
+<br>
+<a class="tooltip-role-SpellbreakerPower"></a>
+<a class="tooltip-role-WeaverPower"></a>
+<a class="tooltip-role-DragonhunterPower"></a>
+<a class="tooltip-role-HolosmithPower"></a>
+<a class="tooltip-role-DaredevilPower"></a>
+<a class="tooltip-role-ChronomancerPower"></a>
+<br>
+Condi DPS
+<br>
+<a class="tooltip-role-BerserkerCondi"></a>
+<a class="tooltip-role-FirebrandCondi"></a>
+<a class="tooltip-role-EngineerCondi"></a>
+<a class="tooltip-role-DaredevilCondi"></a>
+<a class="tooltip-role-MirageCondi"></a>
+<a class="tooltip-role-RenegadeCondi"></a>
+<a class="tooltip-role-SoulbeastCondi"></a>
+<a class="tooltip-role-ScourgeCondi"></a>
+<br>
+<br>
+Effects
+<br>
+<a class="tooltip-Aegis"></a>
+<a class="tooltip-Alacrity"></a>
+<a class="tooltip-Fury"></a>
+<a class="tooltip-Might"></a>
+<a class="tooltip-Protection"></a>
+<a class="tooltip-Quickness"></a>
+<a class="tooltip-Regeneration"></a>
+<a class="tooltip-Resistance"></a>
+<a class="tooltip-Retaliation"></a>
+<a class="tooltip-Stability"></a>
+<a class="tooltip-Swiftness"></a>
+<a class="tooltip-Vigor"></a>
+<br>
+<a class="tooltip-Stun"></a>
+<a class="tooltip-Daze"></a>
+<a class="tooltip-Knockback"></a>
+<a class="tooltip-Knockdown"></a>
+<a class="tooltip-Launch"></a>
+<a class="tooltip-Pull"></a>
+<a class="tooltip-Float"></a>
+<a class="tooltip-Sink"></a>
+<a class="tooltip-Stealth"></a>
+<a class="tooltip-Revealed"></a>
+<a class="tooltip-Invulnerability"></a>
+<a class="tooltip-Nourishment"></a>
+<a class="tooltip-Enhancement"></a>
+<br>
+<a class="tooltip-Bleeding"></a>
+<a class="tooltip-Burning"></a>
+<a class="tooltip-Confusion"></a>
+<a class="tooltip-Poison"></a>
+<a class="tooltip-Torment"></a>
+<a class="tooltip-Blind"></a>
+<a class="tooltip-Chilled"></a>
+<a class="tooltip-Crippled"></a>
+<a class="tooltip-Fear"></a>
+<a class="tooltip-Immobile"></a>
+<a class="tooltip-Slow"></a>
+<a class="tooltip-Taunt"></a>
+<a class="tooltip-Vulnerability"></a>
+<a class="tooltip-Weakness"></a><br>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut tristique odio sit amet hendrerit efficitur. Ut quis volutpat ex. Duis et congue nisi, ut efficitur mauris. Donec porttitor malesuada ultrices. Fusce orci purus, scelerisque eu turpis quis, euismod facilisis eros. Donec consectetur, lorem aliquet consectetur fringilla, massa ipsum mattis ligula, et dapibus nibh leo sit amet est. Integer commodo sit amet ligula quis tincidunt. Aliquam commodo hendrerit quam a mattis. Integer a dictum ante. In blandit luctus tortor. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec fermentum sem arcu, a dictum neque molestie ut. Morbi iaculis elementum eros, id facilisis tortor rutrum ut. In tristique pharetra enim quis lacinia. Phasellus tristique neque sit amet velit tempor aliquam. Nam dapibus fringilla velit at rhoncus.
+
+Nunc quis sapien quis nibh dignissim scelerisque. Maecenas sapien neque, feugiat non imperdiet eget, accumsan vitae neque. Maecenas in velit suscipit, maximus orci sit amet, dapibus odio. Mauris a arcu ullamcorper, vulputate orci auctor, euismod nulla. Aliquam viverra sit amet enim non eleifend. Mauris consectetur leo tellus, vitae condimentum mi bibendum eget. In hac habitasse platea dictumst. Sed at mi lacus. Ut ac feugiat purus. Duis non nibh nec nisl egestas malesuada posuere in tortor. Quisque dolor augue, rutrum quis tellus sed, fermentum rhoncus justo. Sed et suscipit ipsum. Morbi condimentum dui et massa aliquam aliquet.
+
+Duis et lacus ut nisl iaculis elementum. Cras viverra erat urna, sollicitudin finibus orci venenatis vel. Donec iaculis laoreet enim, quis pulvinar magna. Aliquam congue, quam non congue ultricies, nulla dui finibus arcu, non efficitur mauris purus non metus. Suspendisse sagittis tellus purus, in finibus velit placerat a. Praesent pharetra auctor turpis ut faucibus. Mauris eu maximus purus. Duis vestibulum, ex vitae consequat euismod, erat nibh porta justo, pulvinar congue sapien ante quis ligula. Vestibulum aliquam consequat nisl vitae dapibus.
+
+Maecenas ut rutrum nibh. Morbi a tellus venenatis nisl viverra consequat. Suspendisse potenti. Sed varius maximus augue, ac congue neque pharetra eget. Quisque ullamcorper convallis pretium. Quisque eget rhoncus purus, ac accumsan dolor. Nulla facilisi. Suspendisse tempus mollis sapien vitae bibendum. Donec bibendum commodo est. In id felis ullamcorper mi accumsan venenatis sed eu quam. Nulla eu lacinia urna. Nulla pellentesque semper orci, ac interdum purus consequat eget. Integer molestie massa eu eros facilisis, ac pulvinar dolor imperdiet.
+
+Sed at mi ipsum. Mauris nec fringilla ligula. Quisque maximus urna in risus facilisis posuere. In in enim eget metus faucibus blandit et non ante. Fusce nec urna sapien. Nam laoreet ante dui, nec venenatis neque pharetra in. Nulla tempor pretium est, eget ullamcorper odio posuere ac. In velit nunc, suscipit et varius id, dictum eget metus. Vestibulum at nunc sed velit fringilla semper eu ut est.
+            </div>
+
+          <div id="Gorseval" class="col s12">Gorseval</div>
+          <div id="Sabetha" class="col s12">Sabetha</div>
+        </div>
+      </main>
+      <!--Footer-->
+      <footer>
+
+      </footer>
 
       <!--Import jQuery & others before materialize.js-->
-      <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+      <script type="text/javascript" src="js/jquery.js"></script>
       <script type="text/javascript" src="js/materialize.js"></script>
       <script type="text/javascript" src="js/tooltips.js"></script>
       <!--Initialize Components-->

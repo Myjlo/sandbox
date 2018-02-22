@@ -177,6 +177,7 @@
             tooltip[i].innerHTML = '<img class="icon-effect tooltipped" data-position="top" data-delay="50" data-tooltip=\'<img class="icon-effect" src="assets/Effects/' + effect + '.png"> ' + effectName + '\' class="icon-effect" src="assets/Effects/' + effect + '.png">';
             tooltip[i].href = "https://wiki.guildwars2.com/wiki/" + effect;
             tooltip[i].setAttribute('target', '_blank');
+            tooltip[i].id = "tooltip";
         };
     }
 

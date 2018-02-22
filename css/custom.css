@@ -1,14 +1,79 @@
+/*
+a:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #F39C12;
+  visibility: hidden;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+}
+a:hover:before {
+	visibility: visible;
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+
+nav ul a:hover {
+  color: #F39C12;
+}
+
+.tabs .tab a:before, 
+.tabs .tab a:hover:before,
+nav ul a:before,
+nav ul a:hover:before
+#tooltip:before,
+#tooltip.tooltipped:hover:before {
+	all: unset;
+}
+*/
+/* Core */
+html {
+	background: url("../assets/background.png");
+	-webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;	
+}
+html, body {
+	height: 100%;
+	color: #999;
+}
+
+/* Content Blocks */
+.page-content {
+	background-color: rgba(0,0,0,0.5);
+}
+.col-content {
+	margin: 0 auto;
+	width: 90%;
+}
+.nav {
+	background: #272727;
+	border-bottom: 1px solid #101010;
+	height: 48px;
+}
 /* Icon Styling */
 .icon-effect, .icon-class, .icon-role {
 	width: 20px;
 	height: 20px;
 	vertical-align: middle;
 }
-
+.icon-encounter {
+	vertical-align: middle;
+	width: 22px;
+	height: 22px;
+}
 /* Text Styling */
 .text-item, .text-mechanic, .text-role {
 	font-weight: bold;
-
 }
 .text-timer {
 	color: #bbb;
@@ -20,63 +85,67 @@
 .text-muted {
 	color: #999;
 }
-
-.elementalist {
-	color: #F68A87;
+/* Links */
+a {
+	position: relative;
+	text-decoration: none;
+	color: #F39C12;
 }
 
-.mesmer {
-	color: #B679D5;
+/* Cards */
+.card {
+	background-color: #191919;
+}
+.card-header {
+	background-color: #272727;
+}
+.card-title {
+	text-shadow: 2px 2px 2px rgba(0, 0, 0, 1);
 }
 
-.necromancer {
-	color: #41a664;
+.pinned {
+  margin: 0 auto;
+  max-width: 1280px;
+  width: 100%;
+  left: 50%;
+	transform: translateX(-50%);
 }
 
-.ranger {
-	color: #8bda5b;
+@media only screen and (min-width: 601px) {
+  .pinned {
+    width: 85%;
+    margin: 0 auto;
+		left: 50%;
+		transform: translateX(-50%);
+  }
 }
 
-.thief {
-	color: #C08F95;
+@media only screen and (min-width: 993px) {
+  .pinned {
+    width: 70%;
+    margin: 0 auto;
+		left: 50%;
+		transform: translateX(-50%);
+  }
 }
-
-.engineer {
-	color: #a86931;
+.pinned-fix {
+	height: 48px;
 }
-
-.warrior {
-	color: #FFD166;
+/* Tabs */
+.tabs {
+	background-color: #272727;
+	z-index: 997;
 }
-
-.guardian {
-	color: #58bddc;
+.tabs .tab a {
+	color: #ddd;
 }
-
-.revenant {
-	color: #d8543a;
+.tabs .tab a:hover, .tabs .tab a.active {
+	color: #F39C12;
 }
-
-
-/* Elements */
-html, body {
-	background: url(../assets/background.png);
-	-webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    color: #fff;
-
+.tabs .indicator {
+	background-color: #F39C12;
 }
-.row dt, .row dd {
-	margin-top: 10px;
+/* Tooltips */
+.material-tooltip {
+	background-color: rgba(0,0,0,0.80);
 }
-.btn-return-top {
-	position: fixed;
-	bottom: 2em;
-	right: 2em;
-	display: none;
-}
-
